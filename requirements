@@ -1,0 +1,7 @@
+configobj
+eventlet
+ipython
+mongoengine
+pecan
+six
+WSME
