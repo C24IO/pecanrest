@@ -1,6 +1,6 @@
 from pecan import expose, redirect
 from webob.exc import status_map
-
+from pecanrest.controllers import get_handler
 
 class RootController(object):
 
@@ -20,3 +20,5 @@ class RootController(object):
             status = 500
         message = getattr(status_map.get(status), 'explanation', '')
         return dict(status=status, message=message)
+
+    get_handler = get_handler.GetHandlerController()
